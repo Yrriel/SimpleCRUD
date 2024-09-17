@@ -12,7 +12,7 @@
         Your browser does not support HTML5 video.
     </video>
     <div class="wrapper">
-    <form action="register.php" method="POST" class="form-wrapper sign-up">
+    <form action="backend/backend.Register.php" method="POST" class="form-wrapper sign-up">
                 <h1>Register</h1>
                 <div class="input-box">
                     <input type="text" placeholder="Username" name="username" required>
