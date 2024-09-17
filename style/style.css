@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+
+.form-wrapper{
+    position: absolute;
+    background: linear-gradient(to top, rgb(105, 105, 105), rgb(0, 0, 0));
+    height: 500px;
+    width: 420px;
+    padding: 40px;
+    box-shadow: 0 0 10px #333;
+    border-radius: 30px;
+}
+
+.form-wrapper h1{
+    color: #ffffffb7;
+    font-size: 40px;
+    text-align: center;
+}
+
+.form-wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder{
+    color: #fff;
+}
+
+.go-back-link{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.go-back-link a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.go-back-link a:hover{
+    text-decoration: underline;
+}
+
+.form-wrapper .btn{
+    margin-top: 20px;
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+/* ---------register-------------------- */
+
+.wrapper .form-wrapper.sign-up{
+    transform: rotate(7deg);
+}
+
+.wrapper.animate-signIn .form-wrapper.sign-in{
+    animation: animateSignIn 1.5s ease-in-out forwards;
+}
+
+@keyframes animateSignIn{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(-450px);
+    }
+    100%{
+        transform: translateX(0) rotate(7deg);
+    }
+}
+
+.wrapper.animate-signIn .form-wrapper.sign-up{
+    
+    animation: animateRotate .7s ease-in-out forwards;
+    animation-delay: .5s;   
+}
+
+@keyframes animateRotate {
+    0%{
+        transform: rotate(7deg);
+    }
+    100%{
+        transform: rotate(0);
+        z-index: 1;
+    }
+}
+
+/* -----------sign in------------ */
+
+.wrapper.animate-signUp .form-wrapper.sign-up{
+    animation: animateSignUp 1s ease-in-out forwards;
+}
+
+@keyframes animateSignUp{
+    0%{
+        transform: translateX(0);
+        z-index: 1;
+    }
+    50%{
+        transform: translateX(500px);
+    }
+    100%{
+        transform: translateX(0) rotate(7deg);
+    }
+}
+
+.wrapper.animate-signUp .form-wrapper.sign-in{
+    transform: rotate(7deg);
+    animation: animateRotate .7s ease-in-out forwards;
+    animation-delay: .3s;
+}
+
+/* -----------end------------ */
+
+.wrapper.animate-forgot .form-wrapper.forgot-in{
+    animation: animateForgot 2s ease-in-out forwards;
+}
+
+@keyframes animateForgot{
+    0%{
+        transform: translateX(0);
+        z-index: 1;
+    }
+    50%{
+        transform: translateX(500px);
+    }
+    100%{
+        transform: translateX(0) rotate(7deg);
+    }
+}
+
+.wrapper.animate-forgot2 .form-wrapper.forgot-in{
+    animation: animateForgot 2s ease-in-out forwards;
+}
+
+@keyframes animateForgot{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(500px);
+    }
+    100%{
+        transform: translateX(0) rotate(7deg);
+    }
+}
+
+.wrapper.animate-forgot .form-wrapper.sign-in{
+    transform: rotate(7deg);
+    animation: animateRotate .7s ease-in-out forwards;
+    animation-delay: .3s;
+}
+
+
+
+/* ----------------------------- */
+
+.wrapper .form-wrapper.forgot-in{
+    transform: rotate(9deg);
+}
+
+.wrapper.animate-signIn2 .form-wrapper.sign-in{
+    animation: animateSignIn2 1s ease-in-out forwards;
+}
+
+@keyframes animateSignIn2{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(-500px);
+    }
+    100%{
+        transform: translateX(0) rotate(7deg);
+    }
+}
+
+.wrapper.animate-signIn2 .form-wrapper.forgot-in{
+    animation: animateRotate .7s ease-in-out forwards;
+    animation-delay: .3s;
+}
+
+@keyframes animateRotate {
+    0%{
+        transform: rotate(7deg);
+    }
+    100%{
+        transform: rotate(0);
+        z-index: 1;
+    }
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    filter: brightness(70%);
+  }
