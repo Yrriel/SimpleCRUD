@@ -53,6 +53,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     isUserDisabled($isuserdisabled, $mysqlitime, $data_disabledtime_left, $conn, $querylogin_clearloginattempts, $querylogin_update_enable);
     if(userPassMatched($resultByUsername, $result)){
         //login success
+
+        $query = "INSERT INTO `logs`(`time`, `username`, `action`) VALUES ('$mysqlitime','$username','Logged in')";
+        $conn->query($query);
+
         $dataUser = mysqli_fetch_array($result);
         $_SESSION['email'] = $dataUser['email'];
         $_SESSION['user_name'] = $dataUser['user_name'];

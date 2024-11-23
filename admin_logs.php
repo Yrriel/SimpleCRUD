@@ -6,6 +6,13 @@ if(empty($_SESSION['user_name'])){
     die();
 }
 
+require_once 'backend/connection.php';
+$username = $_SESSION['user_name'];
+$mysqlitime = date('Y-m-d H:i:s');
+$query = "INSERT INTO `logs`(`time`, `username`, `action`) VALUES ('$mysqlitime','$username','Checked logs')";
+$conn->query($query);
+mysqli_close($conn); 
+
 ?>
 
 
@@ -34,10 +41,10 @@ if(empty($_SESSION['user_name'])){
         
         <div class="left-container">
             <ul>
-                <li style="background-color: #00000050;">Status</li>
-                <a href="admin_logs.php"><li>Audit logs</li></a>
+                <a href="admin_homepage.php"><li>Status</li></a>
+                <li style="background-color: #00000050;">Audit logs</li>
                 <!-- <li>Locked Accounts</li>
-                <li>Audit logs</li> -->
+                 -->
             </ul>
         </div>
         <div class="right-container">
@@ -53,7 +60,7 @@ if(empty($_SESSION['user_name'])){
                             xhttp.onload = function(){
                                 document.getElementById("table").innerHTML = this.responseText;
                             }
-                            xhttp.open("GET", "backend/XMLGetdb.php");
+                            xhttp.open("GET", "backend/XMLGetLogs.php");
                             xhttp.send();
                         }
                         setInterval(function(){
@@ -63,9 +70,6 @@ if(empty($_SESSION['user_name'])){
                 </div>
                 <div id="table"></div>
             </div>  
-            <div class="container3">
-                <p>Click on any rows to edit Admin or Locked status</p>
-            </div>    
         </div>
     </main>
     <footer class="main-footer">

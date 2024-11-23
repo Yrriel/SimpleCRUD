@@ -30,6 +30,7 @@ $displayAdmin = $resultarrayuser['is_admin'];
 $displayLocked = $resultarrayuser['locked_account'];
 
 $_SESSION['changing-this'] = $displayEmail;
+$_SESSION['changes-user'] = $displayUsername;
 
 ?>
 

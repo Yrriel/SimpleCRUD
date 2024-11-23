@@ -105,6 +105,14 @@ body {
     border-radius: 10px;
 }
 
+.left-container li:hover{
+    background-color: #00000050;
+}
+
+.left-container li .current-page{
+    background-color: #777;
+}
+
 .right-container{
     position: relative;
     background:linear-gradient(to top, rgba(255, 190, 226, 0.308), rgba(90, 43, 165, 0.342));
